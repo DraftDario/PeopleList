@@ -3,6 +3,7 @@ package ch.hearc.ig.odi.peoplelist.business;
 import java.io.Serializable;
 import java.util.Date;
 import javax.faces.bean.SessionScoped;
+//import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
@@ -55,7 +56,7 @@ public class Person implements Serializable{
         this.lastName = lastName;
     }
 
-    public Boolean isMarried() {
+    public Boolean getMarried() {
         return married;
     }
 
