@@ -3,7 +3,10 @@ package ch.hearc.ig.odi.peoplelist.presentation;
 import ch.hearc.ig.odi.peoplelist.service.Services;
 import java.util.List;
 import javax.inject.Named;
-import javax.faces.bean.RequestScoped;
+// Correctif :
+// import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
+
 import javax.inject.Inject;
 
 /**
