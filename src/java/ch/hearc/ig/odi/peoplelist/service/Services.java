@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateful;
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
 /**
  *
@@ -20,6 +21,7 @@ import javax.enterprise.context.SessionScoped;
  */
 @SessionScoped
 @Stateful
+@Named(value="services")
 public class Services implements Serializable{
     
     // Permet de stocker la liste de personnes de telle manière à simuler une base de données
