@@ -41,33 +41,33 @@
         <h:form>
             <fieldset>
                 #{bundle.gender} 
-                <h:selectOneMenu binding="#{gender}">
+                <h:selectOneMenu value="#{addPersonBean.person.gender}">
                     <f:selectItem itemValue="male" itemLabel="male" />
                     <f:selectItem itemValue="female" itemLabel="female" />
                 </h:selectOneMenu>
                 <br/>
 
                 #{bundle.firstName} 
-                <h:inputText binding="#{firstName}" />
+                <h:inputText value="#{addPersonBean.person.firstName}" />
                 <br/>
 
                 #{bundle.lastName} 
-                <h:inputText binding="#{lastName}" />
+                <h:inputText value="#{addPersonBean.person.lastName}" />
                 <br/>
 
                 #{bundle.married}
-                <h:selectOneRadio binding="#{married}">
+                <h:selectOneRadio value="#{addPersonBean.person.married}">
                     <f:selectItem itemValue="#{true}" itemLabel="Oui" />
                     <f:selectItem itemValue="#{false}" itemLabel="Non" />
                 </h:selectOneRadio>
                 <br/>
 
                 #{bundle.birthDate}
-                <h:inputText binding="#{birthDate}">  
+                <h:inputText value="#{addPersonBean.person.birthDate}">  
                     <f:convertDateTime pattern="dd.mm.yyyy"/>  
                 </h:inputText>
                 <br/>
-                <h:commandButton value="Inscription" action="#{services.savePerson(gender.value, firstName.value, lastName.value, married.value, birthDate.value)}" />
+                <h:commandButton value="Inscription" action="#{addPersonBean.save()}" />
                 <br/>
             </fieldset>
         </h:form>

@@ -14,7 +14,6 @@ import javax.inject.Inject;
  * @author dario.mosca
  */
 @Named(value = "peopleListBean")
-//@Dependent
 @RequestScoped
 public class PeopleListBean {
 
