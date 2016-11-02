@@ -37,7 +37,9 @@
                     </h:column>
                     <h:column>
                         <f:facet name="header">#{bundle.birthDate}</f:facet>
-                            #{person.birthDate}
+                        <h:outputText value="#{person.birthDate}" >
+                            <f:convertDateTime pattern="dd.mm.yyyy" />
+                        </h:outputText>
                     </h:column>
                 </h:dataTable>
 
