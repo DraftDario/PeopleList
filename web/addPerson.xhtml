@@ -27,11 +27,15 @@ and open the template in the editor.
                         <br/>
 
                         #{bundle.firstName} 
-                        <h:inputText value="#{addPersonBean.person.firstName}" />
+                        <h:inputText required ="true"
+                                     requiredMessage="Le prénom est obligatoire!"
+                                     value="#{addPersonBean.person.firstName}" />
                         <br/>
 
                         #{bundle.lastName} 
-                        <h:inputText value="#{addPersonBean.person.lastName}" />
+                        <h:inputText required ="true"
+                                     requiredMessage="Le nom est obligatoire!"
+                                     value="#{addPersonBean.person.lastName}" />
                         <br/>
 
                         #{bundle.married}
@@ -42,7 +46,9 @@ and open the template in the editor.
                         <br/>
 
                         #{bundle.birthDate}
-                        <h:inputText value="#{addPersonBean.person.birthDate}">  
+                        <h:inputText required ="true"
+                                     requiredMessage="La date de naissance est obligatoire!"
+                                     value="#{addPersonBean.person.birthDate}">  
                             <f:convertDateTime pattern="dd.MM.yyyy"/>  
                         </h:inputText>
                         <br/>
