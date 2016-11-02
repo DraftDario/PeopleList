@@ -2,7 +2,6 @@ package ch.hearc.ig.odi.peoplelist.presentation;
 
 import ch.hearc.ig.odi.peoplelist.business.Person;
 import ch.hearc.ig.odi.peoplelist.service.Services;
-import java.util.Date;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -11,25 +10,16 @@ import javax.inject.Inject;
  *
  * @author dario.mosca
  */
-@Named(value = "addPersonBean")
+@Named(value = "deletePerson")
 @RequestScoped
-public class AddPersonBean {
+public class DeletePersonBean {
 
     @Inject
-    Services services;
+    Services service;
 
     private Person person;
 
-    /**
-     * Creates a new instance of AddPersonBean
-     */
-    public AddPersonBean() {
-        person = new Person();
-    }
-
-    public String save() {
-        services.savePerson(person.getGender(), person.getFirstName(), person.getLastName(), person.getMarried(), person.getBirthDate());
-        return "index";
+    public DeletePersonBean() {
     }
 
     public Person getPerson() {
@@ -38,6 +28,11 @@ public class AddPersonBean {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public String delPerson() {
+        service.deletePerson(person);
+        return "index.xhtml";
     }
 
 }
